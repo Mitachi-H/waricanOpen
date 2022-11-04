@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway", メイリオ, sans-serif;
+  background-color: #fafafa;
+}
+body {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+}
+
+/*--------------------------s
+  HEADER
+----------------------------*/
+.header {
+  height: 45px;
+  background-color: #0c6;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .home {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 15px;
+}
+.home-area {
+  width: 100%;
+  height: 100%;
+}
+.home-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.header .back {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 15px;
+}
+.header .back-area {
+  width: 100%;
+  height: 100%;
+}
+.header .back-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.header-text {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+.header .settings {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+}
+.setting-area {
+  width: 100%;
+  height: 100%;
+}
+.setting-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.header .off {
+  display: none;
+}
+
+/*--------------------------
+  LOADER
+----------------------------*/
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 40px;
+  background-color: rgba(51, 51, 51, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none;
+}
+.loader-wrapper.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: #fff;
+  box-shadow: -24px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 0.7s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 #0c6, 24px 0 #fff;
+  }
+  66% {
+    background: #0c6;
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 #0c6;
+  }
+}
+
+/*--------------------------
+  error
+----------------------------*/
+.error-massage {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  font-weight: normal;
+}

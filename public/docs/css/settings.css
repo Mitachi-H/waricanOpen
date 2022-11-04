@@ -1,0 +1,191 @@
+.setting-section {
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+.setting-section-title {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #a2999e;
+}
+.setting-list-container {
+  width: 100%;
+  margin-top: 10px;
+}
+.setting-list-item {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.setting-list-item:hover {
+  background-color: #eef0f2;
+}
+.setting-list-item .setting-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-grow: 2;
+}
+.setting-list-item .setting-summary {
+  font-size: 1.2rem;
+  color: #a2999e;
+  margin-right: 10px;
+}
+.setting-list-item .next-area {
+  font-size: 1.4rem;
+  color: #a2999e;
+}
+.setting-list-item i {
+  transition: transform 0.2s ease-in-out;
+}
+.accordion-item {
+  display: none;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+.rate-setting .rate-setting-wrapper {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rate-setting-item {
+  height: 40px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.rate-title-text {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.rate-setting-item-inside {
+  display: flex;
+  height: 100%;
+  width: 60%; /*幅を固定することでスライダーが移動するのを阻止*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.rate-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+}
+.rate-setting-item-inside input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  height: 10px;
+  width: 100%;
+  background: rgba(0, 204, 102, 0.3);
+  border-radius: 10px;
+}
+/* WebKit向けのつまみ */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: rgb(0, 204, 102);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+}
+/* Moz向けのつまみ */
+input[type="range"]::-moz-range-thumb {
+  background: rgb(0, 204, 102);
+  width: 24px; /* 幅 */
+  height: 24px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  border: none;
+}
+/* Firefoxで点線が周りに表示されてしまう問題の解消 */
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+/* つまみをドラッグしているときのスタイル */
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+}
+.rate-text {
+  font-family: "sans-serif";
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.rate-inside-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.unit-setting .unit-form {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.unit-setting .unit-form span {
+  display: flex;
+  justify-content: center;
+}
+.unit-setting .unit-form label {
+  padding-left: 20px;
+  height: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/*
+.unit-setting .unit-list label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid #a2999e;
+}
+.unit-setting .unit-list input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #0c6;
+  border-radius: 50%;
+}
+*/
+.unit-setting .unit-form label input {
+  margin-right: 5px;
+  cursor: pointer;
+}

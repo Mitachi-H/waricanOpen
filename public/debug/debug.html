@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="check">確認</button>
+        <button id="button">送信</button>
+        <select>
+            <option>add</option>
+            <option>edit</option>
+            <option>delete</option>
+        </select>
+        <select>
+            <option>Group</option>
+            <option>Member</option>
+            <option>Event</option>
+        </select>
+        <div id = alldata>
+            <input id="groupId" placeholder="groupId">
+            <input id="memberId" placeholder="memberId">
+            <input id="eventId" placeholder="eventId">
+            <input id="name" placeholder="name">
+        </div>
+    </div>
+    <script>
+        const check = document.getElementById("check")
+        const button = document.getElementById("button")
+        const alldata = document.getElementById("alldata").children
+        check.addEventListener("click",fun)
+        button.addEventListener("click",async(event)=>{
+            let data={}
+            for(const html of alldata){
+                data[html.id]=html.value
+            }
+            const obj = {
+                method:button.nextElementSibling.value+button.nextElementSibling.nextElementSibling.value,
+                arguments:data
+            }
+            groupId=data.groupId
+            let url=""
+            if(obj.method==="addGroup"||obj.method==="addMember"){
+                url="/home/addGroup"
+            }
+            if(obj.method==="editGroup"||obj.method==="addMember"||obj.method==="deleteMember"){
+                url="/home/groupHome/"+groupId
+            }
+            if(obj.method==="deleteGroup"){
+                url="/home/groupHome/"+groupId+"/deleteGroup"
+            }
+            const prom = (await fetch(url,{
+                    method:"POST",
+                    headers:{'Content-Type': 'application/json'},
+                    body:JSON.stringify(obj)
+                })).json()
+            prom.then(result=>{console.log(result)})
+        })
+        async function fun(){
+            const prom = (await fetch("/home/groupHome/"+alldata[0].value)).json()
+            prom.then(result=>{console.log(result)})
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<DOCTYPE! html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8" />
+      <title>warican</title>
+      <link class=".css" rel="stylesheet" href="/docs/css/destyle.css" />
+      <link class=".css" rel="stylesheet" href="/docs/css/home.css" />
+      <link class=".css" rel="stylesheet" href="/docs/css/main.css" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+      />
+    </head>
+    <body>
+      <div class="body-wrapper">
+        <header class="header">
+          <div class="home off"></div>
+          <p class="header-text"><a class="goToHome" href="#">WARICAN</a></p>
+          <div class="settings off">
+            <a class="setting-area" href="settings.html"
+              ><i class="setting-icon fa-solid fa-gear"></i
+            ></a>
+          </div>
+        </header>
+        <section class="main-view">
+          <div class="main-view-image-box">
+            <img
+              class="main-view-image"
+              src="/img/error_img.png"
+              alt="main-image"
+            />
+          </div>
+        </section>
+        <div class="error-container">
+          <div class="error-massage"><%- err %></div>
+        </div>
+        <footer class="footer"></footer>
+        <script>
+          const loadscript = document.createElement("script");
+          loadscript.type = "text/javascript";
+          loadscript.src = location.origin + "/docs/js/error.js";
+          document.querySelector(".footer").after(loadscript);
+        </script>
+      </div>
+      <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        id="last-script"
+        src="https://kit.fontawesome.com/4cfd8ef986.js"
+        crossorigin="anonymous"
+      ></script>
+    </body></html
+></DOCTYPE!>

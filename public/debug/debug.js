@@ -1,0 +1,1 @@
+console.log(new Date().toDateString().split(" ").splice(1,3).join("-"))

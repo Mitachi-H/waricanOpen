@@ -1,0 +1,147 @@
+<DOCTYPE! html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8" />
+      <title>createEvent</title>
+      <link rel="stylesheet" href="../../../docs/css/destyle.css" />
+      <link rel="stylesheet" href="../../../docs/css/main.css" />
+      <link rel="stylesheet" href="../../../docs/css/createEvent.css" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+      />
+    </head>
+    <body>
+      <header class="header">
+        <div class="home">
+          <a href="index.html" class="goToHome home-area"
+            ><i class="home-icon fa-solid fa-house"></i
+          ></a>
+        </div>
+        <p class="header-text">
+          <a class="goToHome" href="index.html">WARICAN</a>
+        </p>
+        <div class="settings off">
+          <a class="setting-area" href="settings.html"
+            ><i class="setting-icon fa-solid fa-gear"></i
+          ></a>
+        </div>
+      </header>
+      <section class="tab">
+        <input type="radio" name="tab_item" id="one" checked />
+        <label class="tab-item" for="one">1人が支払い</label>
+        <input type="radio" name="tab_item" id="several" />
+        <label class="tab-item" for="several">何人かが支払い</label>
+      </section>
+      <div class="tab-content show" id="one-content">
+        <section class="one-page">
+          <div class="payer-select-container">
+            <div class="select-wrap">
+              <select
+                class="select"
+                name="payer-select-box"
+                id="payer-select"
+                required
+              >
+                <option selected disabled>払った人</option>
+                <option class="payer-1">例</option>
+              </select>
+            </div>
+            <p class="large-text">が</p>
+          </div>
+          <div class="receiver-checkbox-container">
+            <div class="receiver-checkbox-item">
+              <div class="checkbox-area" id="receiver-1">
+                <span class="checkbox-dummy"></span>
+                <p class="receiver-name">例</p>
+              </div>
+            </div>
+          </div>
+          <div class="select-all-box">
+            <div class="checkbox-area" id="select-all-01">
+              <span class="checkbox-dummy"></span>
+              <p class="select-all-text">全員選択</p>
+            </div>
+          </div>
+          <div class="event-name-container">
+            <p class="large-text text01">の</p>
+            <input type="text" class="event-name-input" name="eventName" />
+            <p class="large-text">を支払って</p>
+          </div>
+          <div class="cost-container">
+            <div class="yen-box"><p>¥</p></div>
+            <input type="number" class="cost-input" name="cost" />
+            <p class="large-text">かかった</p>
+          </div>
+          <div class="buttons">
+            <div class="add-event-button">
+              <a class="add-event-button-area" data-isSeveral="0">追加</a>
+            </div>
+            <div class="back-button">
+              <a
+                href="#"
+                onclick="history.back(-1);return false;"
+                class="back-button-area"
+                >戻る</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tab-content" id="several-content">
+        <section class="several-page">
+          <div class="payer-checkbox-wrapper">
+            <div class="payer-checkbox-container">
+              <div class="payer-checkbox-item">
+                <div class="checkbox-area payer-several" id="payer-several">
+                  <span class="checkbox-dummy"></span>
+                  <p class="payer-name">例</p>
+                </div>
+              </div>
+            </div>
+            <p class="large-text">が</p>
+          </div>
+          <div class="receiver-checkbox-container"></div>
+          <div class="select-all-box">
+            <div class="checkbox-area" id="select-all-several">
+              <span class="checkbox-dummy"></span>
+              <p class="select-all-text">全員選択</p>
+            </div>
+          </div>
+          <div class="event-name-container">
+            <p class="large-text text01">の</p>
+            <input type="text" class="event-name-input" name="eventName" />
+            <p class="large-text">を支払った</p>
+          </div>
+          <div class="cost-per-payer-container">
+            <div class="cost-per-payer-wrapper"></div>
+          </div>
+          <div class="buttons">
+            <div class="add-event-button">
+              <a class="add-event-button-area" data-isSeveral="1">追加</a>
+            </div>
+            <div class="back-button">
+              <a
+                href="#"
+                onclick="history.back(-1);return false;"
+                class="back-button-area"
+                >戻る</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer></footer>
+      <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://kit.fontawesome.com/4cfd8ef986.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="../../../docs/js/createEvent.js"></script>
+      <script src="../../../docs/js/goTo.js"></script>
+    </body></html
+></DOCTYPE!>

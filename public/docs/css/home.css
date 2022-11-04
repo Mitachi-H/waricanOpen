@@ -1,0 +1,107 @@
+/*基本設定はmain.cssの方で*/
+
+.body-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+/*--------------------------
+    MAIN VIEW
+----------------------------*/
+.main-view {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+}
+.main-view-image-box {
+  width: 100%;
+}
+.main-view-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+/*--------------------------
+    BUTTONS
+----------------------------*/
+.make-group {
+  width: 100%;
+}
+.button {
+  margin: 0 20px 20px 20px;
+  height: 70px;
+  opacity: 1;
+  background-color: #0c6;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.button-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/*--------------------------
+  GROUP LIST
+----------------------------*/
+.group-list {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.group-list-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.group-list-container {
+  width: 100%;
+  margin-top: 10px;
+}
+.group-list-item {
+  width: 100%;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #0c6;
+  cursor: pointer;
+  border-bottom: 0px;
+}
+.group-list-item:last-child {
+  border: 1px solid #0c6;
+}
+.group-list-item:hover {
+  opacity: 0.8;
+}
+.group-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0c6;
+}
+.group-list-item .icon {
+  font-size: 2rem;
+  color: #0c6;
+}
+
+/*--------------------------
+  FOOTER
+----------------------------*/
+.footer {
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+}
+/*--------------------------
+  ERROR
+----------------------------*/

@@ -1,0 +1,150 @@
+<DOCTYPE! html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8" />
+      <title></title>
+      <link rel="stylesheet" href="../../../docs/css/destyle.css" />
+      <link rel="stylesheet" href="../../../docs/css/main.css" />
+      <link rel="stylesheet" href="../../../docs/css/settings.css" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+      />
+    </head>
+    <body>
+      <header class="header">
+        <div class="home off">
+          <a href="" class="home-area"
+            ><i class="home-icon fa-solid fa-house"></i
+          ></a>
+        </div>
+        <div class="back">
+          <a href="#" class="back-area">
+            <i class="back-icon fa-solid fa-chevron-left"></i>
+          </a>
+        </div>
+        <p class="header-text">設定</p>
+        <div class="settings">
+          <a class="setting-area off" href="#"
+            ><i class="setting-icon fa-solid fa-gear"></i
+          ></a>
+        </div>
+      </header>
+      <section class="setting-section">
+        <p class="setting-section-title">一般</p>
+        <div class="setting-list-container">
+          <div class="setting-list-item accordion-trigger fast">
+            <p class="setting-name">精算設定</p>
+            <p class="setting-summary" id="rate-summary">デフォルト</p>
+            <div class="next-area">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-item rate-setting">
+            <div class="rate-setting-wrapper">
+              <div class="rate-setting-item">
+                <p class="rate-title-text">男子少し多め</p>
+                <div class="rate-setting-item-inside">
+                  <div class="rate-box">
+                    <input
+                      id="little-rate"
+                      class="rate-input"
+                      min="1.0"
+                      max="2.0"
+                      step="0.1"
+                      type="range"
+                    />
+                    <p class="rate-text"></p>
+                  </div>
+                  <p class="rate-inside-text">倍</p>
+                </div>
+              </div>
+              <div class="rate-setting-item">
+                <p class="rate-title-text">男子かなり多め</p>
+                <div class="rate-setting-item-inside">
+                  <div class="rate-box">
+                    <input
+                      id="large-rate"
+                      class="rate-input"
+                      min="1.5"
+                      max="2.5"
+                      step="0.1"
+                      type="range"
+                    />
+                    <p class="rate-text"></p>
+                  </div>
+                  <p class="rate-inside-text">倍</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="setting-list-item accordion-trigger">
+            <p class="setting-name">割り勘設定</p>
+            <p class="setting-summary" id="unit-summary">100円単位</p>
+            <div class="next-area">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-item unit-setting">
+            <form class="unit-form">
+              <span>
+                <label class="unit-item"
+                  ><input type="radio" name="unit" value="1" />1円単位</label
+                >
+                <label class="unit-item"
+                  ><input type="radio" name="unit" value="10" />10円単位</label
+                >
+              </span>
+              <span>
+                <label class="unit-item"
+                  ><input
+                    type="radio"
+                    name="unit"
+                    value="100"
+                    checked
+                  />100円単位</label
+                >
+                <label class="unit-item"
+                  ><input
+                    type="radio"
+                    name="unit"
+                    value="1000"
+                  />1000円単位</label
+                >
+              </span>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--
+      <section class="setting-section">
+        <p class="setting-section-title">サイト情報</p>
+        <div class="setting-list-container">
+          <div class="setting-list-item">
+            <p class="setting-name">プライバシーポリシー</p>
+            <div class="next-area">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="setting-list-item">
+            <p class="setting-name">利用規約</p>
+            <div class="next-area">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+      <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://kit.fontawesome.com/4cfd8ef986.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="../../../docs/js/settings.js" defer></script>
+      <script src="../../../docs/js/goTo.js" defer></script>
+    </body></html
+></DOCTYPE!>
